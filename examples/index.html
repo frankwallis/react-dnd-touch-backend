@@ -44,8 +44,16 @@
             .item.is-over {
                 border: 1px solid red;
             }
-
-            #main .item.preview {
+            #filler {
+                min-height: 200px;
+            }
+            #outer {
+                
+            }
+            #main {
+                position: relative; /* this being relative causes the issue */
+            }
+            .item.preview {
                 opacity: 0.8;
                 position: absolute;
                 top: 0;
@@ -55,7 +63,8 @@
         </style>
     </head>
     <body>
-        <div id="main"></div>
+        <div id="outer">
+        </div>
         <script type="text/javascript" src="./main.browserified.js"></script>
     </body>
 </html>

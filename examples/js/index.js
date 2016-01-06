@@ -57,8 +57,13 @@ class App extends React.Component {
         });
         return (
             <div>
-                {lists}
-                <ItemPreview key="__preview" name="Item" />
+                <div id="filler">
+                    This is just here to use up some space
+                </div>
+                <div id="main">
+                    {lists}
+                    <ItemPreview key="__preview" name="Item" />
+                </div>
             </div>
         )
     }
@@ -67,7 +72,7 @@ class App extends React.Component {
 var DragDropApp = DragDropContext(Touch({ enableMouseEvents: true }))(App);
 
 function render (lists = datasource) {
-    ReactDOM.render(<DragDropApp lists={lists} />, document.getElementById('main'));
+    ReactDOM.render(<DragDropApp lists={lists} />, document.getElementById('outer'));
 }
 
 render();

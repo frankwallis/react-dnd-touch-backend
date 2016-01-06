@@ -34,6 +34,9 @@ function getNodeClientOffset (node) {
     }
 
     const { top, left } = el.getBoundingClientRect();
+
+    console.log(`getBoundingClientRect: { x: ${left}, y: ${top} }, parentOffset: { x: ${el.offsetLeft}, y: ${el.offsetTop} }`);
+
     return { x: left, y: top };
 }
 
